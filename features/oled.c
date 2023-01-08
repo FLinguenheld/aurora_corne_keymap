@@ -47,111 +47,75 @@ void oled_display(void) {
     // Modifier keys --
     if (get_mods()){
 
-        uint8_t col = 0;
-        uint8_t row = 0;
-
         if (get_mods() & MOD_MASK_CTRL) {
 
-            oled_set_cursor(col, row);
             oled_write_char(0x01, false);
             oled_write_char(0x02, false);
-            row += 1;
-            oled_set_cursor(col, row);
+            oled_write_char(0x03, false);
+            oled_write_char(0x04, false);
+            oled_write_char(0x05, false);
+
             oled_write_char(0x21, false);
             oled_write_char(0x22, false);
-            row += 1;
-            oled_set_cursor(col, row);
-            oled_write_char(0x41, false);
-            oled_write_char(0x42, false);
-            row += 1;
-            oled_set_cursor(col, row);
-            oled_write_char(0x61, false);
-            oled_write_char(0x62, false);
-
-            row = 0;
-            col += 2;
+            oled_write_char(0x23, false);
+            oled_write_char(0x24, false);
+            oled_write_char(0x25, false);
         }
         if (get_mods() & MOD_BIT(KC_LALT)) {
 
-            oled_set_cursor(col, row);
-            oled_write_char(0x03, false);
-            oled_write_char(0x04, false);
-            row += 1;
-            oled_set_cursor(col, row);
-            oled_write_char(0x23, false);
-            oled_write_char(0x24, false);
-            row += 1;
-            oled_set_cursor(col, row);
+            oled_write_char(0x41, false);
+            oled_write_char(0x42, false);
             oled_write_char(0x43, false);
             oled_write_char(0x44, false);
-            row += 1;
-            oled_set_cursor(col, row);
+            oled_write_char(0x45, false);
+
+            oled_write_char(0x61, false);
+            oled_write_char(0x62, false);
             oled_write_char(0x63, false);
             oled_write_char(0x64, false);
-
-            row = 0;
-            col += 2;
+            oled_write_char(0x65, false);
         }
         if (get_mods() & MOD_BIT(KC_RALT)) {
 
-            oled_set_cursor(col, row);
-            oled_write_char(0x05, false);
-            oled_write_char(0x06, false);
-            row += 1;
-            oled_set_cursor(col, row);
-            oled_write_char(0x25, false);
-            oled_write_char(0x26, false);
-            row += 1;
-            oled_set_cursor(col, row);
-            oled_write_char(0x45, false);
-            oled_write_char(0x46, false);
-            row += 1;
-            oled_set_cursor(col, row);
-            oled_write_char(0x65, false);
-            oled_write_char(0x66, false);
+            oled_write_char(0x81, false);
+            oled_write_char(0x82, false);
+            oled_write_char(0x83, false);
+            oled_write_char(0x84, false);
+            oled_write_char(0x85, false);
 
-            row = 0;
-            col += 2;
+            oled_write_char(0xA1, false);
+            oled_write_char(0xA2, false);
+            oled_write_char(0xA3, false);
+            oled_write_char(0xA4, false);
+            oled_write_char(0xA5, false);
         }
         if (get_mods() & MOD_MASK_SHIFT) {
 
-            oled_set_cursor(col, row);
-            oled_write_char(0x07, false);
-            oled_write_char(0x08, false);
-            row += 1;
-            oled_set_cursor(col, row);
-            oled_write_char(0x27, false);
-            oled_write_char(0x28, false);
-            row += 1;
-            oled_set_cursor(col, row);
-            oled_write_char(0x47, false);
-            oled_write_char(0x48, false);
-            row += 1;
-            oled_set_cursor(col, row);
-            oled_write_char(0x67, false);
-            oled_write_char(0x68, false);
+            oled_write_char(0x4B, false);
+            oled_write_char(0x4C, false);
+            oled_write_char(0x4D, false);
+            oled_write_char(0x4E, false);
+            oled_write_char(0x4F, false);
 
-            row = 0;
-            col += 2;
-
+            oled_write_char(0x6B, false);
+            oled_write_char(0x6C, false);
+            oled_write_char(0x6D, false);
+            oled_write_char(0x6E, false);
+            oled_write_char(0x6F, false);
         }
         if (get_mods() & MOD_MASK_GUI) {
 
-            oled_set_cursor(col, row);
-            oled_write_char(0x0B, false);
-            oled_write_char(0x0C, false);
-            row += 1;
-            oled_set_cursor(col, row);
-            oled_write_char(0x2B, false);
-            oled_write_char(0x2C, false);
-            row += 1;
-            oled_set_cursor(col, row);
-            oled_write_char(0x4B, false);
-            oled_write_char(0x4C, false);
-            row += 1;
-            oled_set_cursor(col, row);
-            oled_write_char(0x6B, false);
-            oled_write_char(0x6C, false);
+            oled_write_char(0x8B, false);
+            oled_write_char(0x8C, false);
+            oled_write_char(0x8D, false);
+            oled_write_char(0x8E, false);
+            oled_write_char(0x8F, false);
+
+            oled_write_char(0xAB, false);
+            oled_write_char(0xAC, false);
+            oled_write_char(0xAD, false);
+            oled_write_char(0xAE, false);
+            oled_write_char(0xAF, false);
         }
     }
 };

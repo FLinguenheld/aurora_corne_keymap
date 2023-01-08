@@ -5,8 +5,8 @@
 #pragma once
 
 /* Select hand configuration */
-#define MASTER_LEFT
-// #define MASTER_RIGHT
+// #define MASTER_LEFT
+#define MASTER_RIGHT
 
 // Useless ?
 // #ifdef CONVERT_TO_ELITE_PI
@@ -25,7 +25,8 @@
 // --------------------------------------------------------------------------------
 
 // OLED
-// #define OLED_FONT_H "keyboards/splitkb/aurora/corne/keymaps/aurora_corne_keymap/font/glcdfont.c"
+#undef OLED_FONT_H
+#define OLED_FONT_H "keyboards/splitkb/aurora/corne/keymaps/aurora_corne_keymap/font/glcdfont.c"
 
 #define OLED_BRIGHTNESS 60 // Protect my eyesss
 #define SPLIT_LAYER_STATE_ENABLE
