@@ -14,7 +14,6 @@ MOUSEKEY_ENABLE = yes
 AUTO_SHIFT_ENABLE = yes
 AUTO_SHIFT_MODIFIERS = no
 COMBO_ENABLE = yes
-TAP_DANCE_ENABLE = yes
 LEADER_ENABLE = yes
 
 # Recommended for space cadet shift
